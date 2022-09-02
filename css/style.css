@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --backgroundColor: rgb(69, 69, 69);
     --containerColor: rgb(177, 56, 188);
     --textColor: rgb(255, 255, 255);
@@ -16,16 +16,16 @@ h1, h2, h3, .card-body {
     color: var(--containerColor);
 }
 
+pre {
+    color: var(--textColor);
+}
+
 header p {
     color: var(--textColor);
     font-size: 125%;
     display: flex;
     justify-content: center;
     margin: 20px;
-}
-
-pre {
-    color: var(--textColor);
 }
 
 .card-column {
@@ -55,7 +55,11 @@ pre {
     background: var(--containerColor);
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    height: 200px;
+    width: 400px;
 }
 
 .card-body {
@@ -65,4 +69,104 @@ pre {
 
 code {
     display: inline;
+}  */
+
+
+/* Josh's walkthrough */
+
+:root {
+    --pink: magenta;
+    --dark: rgb(47, 47, 47);
+    --padding: 15px;
+    --radius: 10px;
+}
+
+body {
+    background-color: rgb(47, 47, 47);
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+header {
+    text-align: center;
+}
+
+.page-title {
+    color: var(--pink);
+    font-size: 65px;
+    margin: 25px 0;
+    line-height: 65px;
+}
+
+header p {
+    margin: 0 auto 50px;
+    max-width: 960px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    align-items: stretch;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.card-column {
+    width: 31%;
+    margin-bottom: 65px;
+}
+
+.card {
+    border: 2px dashed white;
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2, .card p {
+    color: var(--pink);
+
+}
+
+.card h2 {
+    background: var(--dark);
+    font-size: 34px;
+    border: 2px solid white;
+    padding: var(--padding);
+    border-radius: var(--radius);
+    position: absolute;
+    top: -34px;
+}
+
+.card p {
+    margin-top: 25px;
+}
+
+.code-block {
+    background: linear-gradient(rgb(147, 0, 147), var(--pink));
+    padding: var(--padding);
+    border-radius: var(--radius);
+    white-space: pre-wrap;
+    flex: 1;
+}
+
+
+@media (max-width: 1400px) {
+   .card-column {
+        width: 48%;
+   } 
+}
+
+@media (max-width: 930px) {
+    .card-column {
+        width: 100%;
+    }
 }
