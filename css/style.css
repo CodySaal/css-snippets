@@ -1,0 +1,68 @@
+:root {
+    --backgroundColor: rgb(69, 69, 69);
+    --containerColor: rgb(177, 56, 188);
+    --textColor: rgb(255, 255, 255);
+}
+
+* {
+    
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+h1, h2, h3, .card-body {
+    color: var(--containerColor);
+}
+
+header p {
+    color: var(--textColor);
+    font-size: 125%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+pre {
+    color: var(--textColor);
+}
+
+.card-column {
+    display:inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border: dashed var(--textColor);
+    height: 300px;
+    width: 500px;
+    margin: 20px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    border: solid var(--textColor);
+    position: relative;
+    margin-top: -15px;
+    background: var(--backgroundColor);
+    width: 300px;
+    
+    
+}
+
+.code-block {
+    color: var(--textColor);
+    background: var(--containerColor);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-body {
+    margin: 10px;
+    font-size: 20px;
+}
+
+code {
+    display: inline;
+}
